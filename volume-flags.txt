@@ -1,0 +1,28 @@
+VOLUME SLIDER FLAGS
+Colors are listed top to bottom. Paste ONE command at a time into Command Prompt.
+After each one, toggle crDroid's volume gradient switch off and on to refresh the slider.
+
+:: RAINBOW
+adb shell settings put system volume_rainbow_colors "E40303,FF8C00,FFED00,008026,004DFF,750787"
+
+:: TRANS
+adb shell settings put system volume_rainbow_colors "5BCEFA,F5A9B8,FFFFFF,F5A9B8,5BCEFA"
+
+:: BI
+adb shell settings put system volume_rainbow_colors "D60270,D60270,9B4F96,0038A8,0038A8"
+
+:: PAN
+adb shell settings put system volume_rainbow_colors "FF218C,FF218C,FFD800,21B1FF,21B1FF"
+
+:: LESBIAN
+adb shell settings put system volume_rainbow_colors "D52D00,EF7627,FF9A56,FFFFFF,D362A4,B55690,A30262"
+
+:: GAY (men's flag)
+adb shell settings put system volume_rainbow_colors "078D70,26CEAA,98E8C1,FFFFFF,7BADE2,5049CC,3D1A78"
+
+:: BACK TO NORMAL (crDroid's own two colors)
+adb shell settings delete system volume_rainbow_colors
+
+If the module ever stops working after a ROM update: untick RainbowVolume in Vector,
+run: adb shell su -c "killall com.android.systemui"
+Everything goes back to stock, and you can send the Vector log to get it fixed.
